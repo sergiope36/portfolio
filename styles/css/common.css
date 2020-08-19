@@ -1,0 +1,32 @@
+:root {
+  --brand-color: #3dd5d7;
+  --main-color:black; }
+
+body {
+  background-color: #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+h1, h2, h3 {
+  color: black; }
+
+a {
+  color: var(--brand-color);
+  text-decoration: none !important; }
+  a:hover {
+    cursor: pointer; }
+
+.button {
+  background-color: var(--brand-color);
+  color: white;
+  opacity: 1;
+  width: 100%;
+  transition: opacity 0.4s;
+  margin-top: 20px; }
+  .button:hover {
+    opacity: 0.7;
+    cursor: pointer; }
+  .button:focus {
+    opacity: 0.7; }

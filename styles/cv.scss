@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+}
+
+header {
+    height: 500px;
+    background: url("../../img/LandingPage.png") no-repeat center;
+    background-size: cover;
+    -webkit-box-shadow: 10px 10px 12px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 12px -5px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 12px -5px #22376d;
+    position: relative;  
+}
+ 
+.description-top {
+    width: 70%; 
+    margin: 0 auto;
+    margin-bottom: 100px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.4);
+    mix-blend-mode: color-burn;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "name name name"
+    "numbers text text"
+    "numbers text text"
+    "hobbies work work";
+    .upper-box {
+        grid-area: name;
+        background-color: #320E3A;
+        color: yellow;
+        padding: 30px 0px 0px 40px;
+        position:relative;    
+        margin-top: -300px;
+        .description-title {
+            font-size: 1.8rem;
+        }
+        .circle {
+            height: 9rem;
+            width: 9rem;
+            border-radius: 100%;
+            background: url("../../img/Picture-profile.jpg") no-repeat center;
+            background-size: cover;
+            z-index: 0;
+            position: absolute;
+            right: 5%;
+            margin-top: -100px;  
+        }
+    }
+
+    .description-numbers{
+        grid-area: numbers;
+        background-color: #7E95A0;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        color: white;
+        padding:0px 10px 40px 10px;
+        column-gap: 1px;
+        row-gap: 1px;
+        p {
+            font-size: 1.3rem;
+        }
+    }
+    .description-text{
+        grid-area: text;
+        background-color: white;
+        padding:30px 40px;
+        hr {
+            border: 1px solid green;
+            width: 70%;
+            margin: 0;
+        }
+        h3 {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+         .CV-line {
+            border: 1px solid red;
+            width: 20%;
+            margin: 0;
+        }
+        p {
+            padding-bottom: 15px;
+            font-size: 1.2rem;
+        }
+    }
+
+    .work{
+        grid-area: work;
+        background-image: url("https://cdn.pixabay.com/photo/2016/12/05/19/45/pill-1884777_960_720.jpg");
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        color:black; 
+        column-gap: 1px;
+        row-gap: 1px;
+        grid-template-areas:
+        "work-title"
+        "work-experience";
+        .work-title{
+            grid-area: work-title;
+            padding-top: 20px;
+        }
+
+        .work-experience{
+            grid-area: work-experience;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: nowrap;
+            padding: 80px;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .description-top {
+        width: 100%;
+    }
+}

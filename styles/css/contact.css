@@ -1,0 +1,84 @@
+:root {
+  --brand-color: #3dd5d7;
+  --main-color:black; }
+
+body {
+  background-color: #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+h1, h2, h3 {
+  color: black; }
+
+a {
+  color: var(--brand-color);
+  text-decoration: none !important; }
+  a:hover {
+    cursor: pointer; }
+
+.button {
+  background-color: var(--brand-color);
+  color: white;
+  opacity: 1;
+  width: 100%;
+  transition: opacity 0.4s;
+  margin-top: 20px; }
+  .button:hover {
+    opacity: 0.7;
+    cursor: pointer; }
+  .button:focus {
+    opacity: 0.7; }
+
+.container-4 {
+  height: 600px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background: url("../../img/contact.png") no-repeat center, linear-gradient(to left bottom, #6bc8d1, #80ccdc, #96cfe4, #acd3e9, #bfd7ec, #c0dbf2, #c0dff8, #c1e3fe, #aae9ff, #8ef0ff, #72f6ff, #5ffbf1);
+  background-blend-mode: darken, multiply;
+  background-size: cover;
+  margin-bottom: 100px; }
+  @media screen and (max-width: 991px) {
+    .container-4 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center; } }
+  .container-4 form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    opacity: 0.7;
+    padding: 40px 80px;
+    box-shadow: 10px 13px 10px -6px rgba(46, 74, 117, 0.69); }
+    .container-4 form:hover {
+      opacity: 1; }
+    .container-4 form input {
+      width: 100%;
+      height: 40px;
+      border-radius: 5%;
+      box-shadow: 10px 13px 10px -10px rgba(46, 74, 117, 0.69);
+      margin-bottom: 30px; }
+    .container-4 form textarea {
+      width: 100%;
+      height: 100px;
+      border-radius: 5%;
+      margin-bottom: 20px;
+      box-shadow: 10px 13px 10px -10px rgba(46, 74, 117, 0.69); }
+  .container-4 .contact-details i {
+    align-items: left;
+    padding-right: 40px; }
+  .container-4 a {
+    color: black;
+    text-align: left;
+    display: inline-block;
+    width: 18rem;
+    line-height: 2rem; }
+    .container-4 a:hover {
+      color: red;
+      font-weight: bold; }
