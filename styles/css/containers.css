@@ -16,7 +16,7 @@ a {
   text-decoration: none !important;
   color: black; }
   a:hover {
-    color: var(--brand-color);
+    color: white;
     cursor: pointer; }
 
 .title {
