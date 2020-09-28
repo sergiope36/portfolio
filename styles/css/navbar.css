@@ -53,10 +53,9 @@ button,
   border-bottom: 3px solid #04c2c9;
   background-color: #223c50;
   opacity: 0.9;
-  font-size: 1.1rem;
+  font-size: 1rem;
   position: absolute;
-  bottom: 0;
-  z-index: 3; }
+  bottom: 0; }
   .nav-bar .logo img {
     height: 45px; }
   .nav-bar .tabs {
