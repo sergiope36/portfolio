@@ -1,24 +1,17 @@
 @import 'common';
 
-$size:991px;
-@mixin size {
-    @media screen and (max-width: #{$size}){
-        @content;
-    }
-}
-
 .nav-bar {
-    width: 75vw;
-    background-color: white;
-    @include display-flex(flex, "" , space-between, center);
-    height: 80px;
-    border-bottom: 1px solid grey;
-    box-shadow: 0px 3px 5px -4px grey;  
-    padding: 0px 40px;
-    font-size: 1.3rem;
-    @include size {
-        width: 90vw;
-    }
+    @include display-flex(flex, "" , center, center);
+    overflow: hidden;
+    height: 55px;
+    width: 100%;
+    border-bottom: 3px solid #04c2c9;
+    background-color: #223c50;
+    opacity: 0.9;
+    font-size: 1.1rem;
+    position: absolute;
+    bottom: 0;
+    z-index: 3;
     .logo {
         img {
             height:45px;
@@ -26,5 +19,21 @@ $size:991px;
     }
     .tabs {
         @include display-flex(flex, row , center, center); 
+        a {
+            transition: 0.5s;
+            color: white;
+            &:hover {
+                color: var(--brand-color);
+                font-weight: bold;
+                
+            }
+        }
     }     
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    opacity: 1;
+ 
 }

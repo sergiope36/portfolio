@@ -26,16 +26,6 @@ header {
     margin-top: -300px; }
     .description-top .upper-box .description-title {
       font-size: 1.8rem; }
-    .description-top .upper-box .circle {
-      height: 9rem;
-      width: 9rem;
-      border-radius: 100%;
-      background: url("../../img/Picture-profile.jpg") no-repeat center;
-      background-size: cover;
-      z-index: 0;
-      position: absolute;
-      right: 5%;
-      margin-top: -100px; }
   .description-top .description-numbers {
     grid-area: numbers;
     background-color: #7E95A0;

@@ -1,84 +1,97 @@
 :root {
-  --brand-color: #3dd5d7;
+  --brand-color: #881e50;
   --main-color:black; }
 
+* {
+  box-sizing: border-box !important; }
+
 body {
-  background-color: #ddd;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
+  background-color: white;
+  overflow-x: hidden; }
 
 h1, h2, h3 {
   color: black; }
 
 a {
-  color: var(--brand-color);
-  text-decoration: none !important; }
+  text-decoration: none !important;
+  color: black; }
   a:hover {
+    color: var(--brand-color);
     cursor: pointer; }
 
+.title {
+  padding: 80px 0px;
+  font-size: 2rem; }
+  .title hr {
+    margin-top: -10px;
+    width: 50%;
+    border: 2px solid var(--brand-color); }
+
+button,
 .button {
-  background-color: var(--brand-color);
+  border: 2px solid white;
   color: white;
-  opacity: 1;
-  width: 100%;
   transition: opacity 0.4s;
   margin-top: 20px; }
+  button:hover,
   .button:hover {
-    opacity: 0.7;
-    cursor: pointer; }
+    border: 2px solid var(--brand-color);
+    cursor: pointer;
+    background-color: var(--brand-color); }
+  button:focus,
   .button:focus {
     opacity: 0.7; }
 
-.container-4 {
-  height: 600px;
+.container-3 {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background: url("../../img/contact.png") no-repeat center, linear-gradient(to left bottom, #6bc8d1, #80ccdc, #96cfe4, #acd3e9, #bfd7ec, #c0dbf2, #c0dff8, #c1e3fe, #aae9ff, #8ef0ff, #72f6ff, #5ffbf1);
-  background-blend-mode: darken, multiply;
-  background-size: cover;
-  margin-bottom: 100px; }
-  @media screen and (max-width: 991px) {
-    .container-4 {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center; } }
-  .container-4 form {
+  -webkit-clip-path: polygon(50% 0%, 100% 13%, 100% 100%, 0 100%, 0 13%);
+  clip-path: polygon(50% 0%, 100% 13%, 100% 100%, 0 100%, 0 13%);
+  background: #223c50;
+  border-top: 3px solid #04c2c9;
+  height: 980px; }
+  .container-3 .title {
+    color: white;
+    padding-top: 150px; }
+  .container-3 .contact-details {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: left;
+    align-items: left;
+    align-items: center;
+    margin-top: -100px;
+    width: 300px;
+    color: white; }
+    .container-3 .contact-details a {
+      color: white; }
+      .container-3 .contact-details a:hover {
+        cursor: pointer;
+        color: var(--brand-color);
+        font-weight: bold; }
+  .container-3 div > p {
+    text-align: left; }
+  .container-3 div > i {
+    color: var(--brand-color);
+    padding-right: 30px;
+    flex-basis: lef; }
+  .container-3 .links {
+    display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
-    opacity: 0.7;
-    padding: 40px 80px;
-    box-shadow: 10px 13px 10px -6px rgba(46, 74, 117, 0.69); }
-    .container-4 form:hover {
-      opacity: 1; }
-    .container-4 form input {
-      width: 100%;
+    flex-direction: row;
+    width: 100%;
+    padding-top: 50px;
+    background: #223c52;
+    box-shadow: 0px -3px 5px 0px rgba(0, 0, 0, 0.14); }
+    .container-3 .links div:nth-child(1) {
+      padding-right: 40px; }
+    .container-3 .links div i {
       height: 40px;
-      border-radius: 5%;
-      box-shadow: 10px 13px 10px -10px rgba(46, 74, 117, 0.69);
-      margin-bottom: 30px; }
-    .container-4 form textarea {
-      width: 100%;
-      height: 100px;
-      border-radius: 5%;
-      margin-bottom: 20px;
-      box-shadow: 10px 13px 10px -10px rgba(46, 74, 117, 0.69); }
-  .container-4 .contact-details i {
-    align-items: left;
-    padding-right: 40px; }
-  .container-4 a {
-    color: black;
-    text-align: left;
-    display: inline-block;
-    width: 18rem;
-    line-height: 2rem; }
-    .container-4 a:hover {
-      color: red;
-      font-weight: bold; }
+      width: 40px;
+      color: white; }
+    .container-3 .links i:hover {
+      cursor: pointer;
+      transform: scale(1.2);
+      color: var(--brand-color); }

@@ -1,5 +1,5 @@
 :root {
-    --brand-color: #3dd5d7; 
+    --brand-color: #881e50; 
     --main-color:black;
 }
 
@@ -10,10 +10,15 @@
     align-items: $align-items;
 }
 
+* {
+    -webkit-box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+}
+
 body {
-    background-color: #ddd;
-    @include display-flex(flex, column , center, center);
-    
+    background-color: white;    
+    overflow-x: hidden;
 }
 
 h1, h2, h3 {
@@ -21,23 +26,34 @@ h1, h2, h3 {
 }
 
 a {
-    color: var(--brand-color);
     text-decoration: none !important;
+    color: black;
     &:hover {
+        color:var(--brand-color);
         cursor: pointer;
     }
 }
 
-.button {
-    background-color: var(--brand-color);
+.title {
+    padding: 80px 0px;
+    font-size: 2rem;
+    hr {
+        margin-top: -10px;
+        width: 50%;
+        border: 2px solid var(--brand-color )
+    }   
+}
+
+button,
+.button{
+    border: 2px solid white;
     color: white;
-    opacity: 1;
-    width: 100%;
     transition: opacity 0.4s;
     margin-top: 20px;
     &:hover {
-        opacity: 0.7;
+        border: 2px solid var(--brand-color);
         cursor: pointer;
+        background-color: var(--brand-color);
     }
     &:focus {
         opacity: 0.7;
