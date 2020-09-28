@@ -145,7 +145,8 @@ button,
       width: 600px;
       height: 400px;
       background: grey;
-      transform: translateX(-70%); }
+      transform: translateX(-70%);
+      transition: transform 1.5s; }
       @media screen and (max-width: 750px) {
         .about .description .pic-profile {
           width: 350px;
@@ -183,7 +184,7 @@ button,
     .about .description .pic-profile,
     .about .description .text {
       opacity: 0;
-      transition: opacity 300ms,  transform 1.2s; }
+      transition: opacity 600ms,  transform 1.8s; }
     .about .description .pic-profile.appear,
     .about .description .text.appear {
       transform: translateX(0);
@@ -227,7 +228,7 @@ button,
 
 .fade-in {
   opacity: 0;
-  transition: opacity 800ms; }
+  transition: opacity 1.5s; }
 
 .fade-in.appear {
   opacity: 1; }
@@ -248,7 +249,7 @@ button,
     transition: 1s ease-out;
     transform: translateY(70%);
     opacity: 0;
-    transition: opacity 500ms,  transform 800ms; }
+    transition: opacity 800ms,  transform 1.5s; }
     @media screen and (max-width: 750px) {
       .container-2 .projects {
         width: 350px; } }
