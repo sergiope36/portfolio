@@ -19,7 +19,7 @@ let slide = document.querySelectorAll('.slide')
 let options ={
   root: null,
   threshold: 0.20,
-  rootMargin: "-100px"
+  rootMargin: "-40px"
 };
 
 let appear = new IntersectionObserver(function(entries, appear) {

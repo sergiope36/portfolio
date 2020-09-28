@@ -227,7 +227,7 @@ button,
 
 .fade-in {
   opacity: 0;
-  transition: opacity 400ms; }
+  transition: opacity 800ms; }
 
 .fade-in.appear {
   opacity: 1; }
