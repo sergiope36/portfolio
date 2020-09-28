@@ -1,5 +1,12 @@
 @import 'common';
 
+$size:450px;
+@mixin size {
+    @media screen and (max-width: #{$size}){
+        @content;
+    }
+}
+
 .nav-bar {
     @include display-flex(flex, "" , center, center);
     overflow: hidden;
@@ -21,6 +28,10 @@
         a {
             transition: 0.5s;
             color: white;
+            @include size {
+                margin: -8px;
+                font-size: 0.8rem;
+            } 
             &:hover {
                 color: var(--brand-color);
                 font-weight: bold;

@@ -7,7 +7,7 @@
 
 body {
   background-color: white;
-  overflow-x: hidden; }
+  overflow-x: hidden !important; }
 
 h1, h2, h3 {
   color: black; }
@@ -57,7 +57,8 @@ button,
   background-size: cover;
   color: white;
   position: relative;
-  z-index: 1; }
+  z-index: 1;
+  width: 100%; }
   .container-1 .button {
     background-color: transparent;
     font-size: 1.5rem;
@@ -147,7 +148,7 @@ button,
       transform: translateX(-70%); }
       @media screen and (max-width: 750px) {
         .about .description .pic-profile {
-          width: 460px;
+          width: 350px;
           height: 300px; } }
       .about .description .pic-profile .clip {
         position: absolute;
@@ -195,11 +196,14 @@ button,
       justify-content: left;
       margin: 60px 0px; }
       .about .description .stats .boxes {
-        width: 400px;
+        width: 420px;
         height: 30px;
         display: grid;
         grid-template-columns: 0.4fr 1fr;
         margin: 10px; }
+        @media screen and (max-width: 750px) {
+          .about .description .stats .boxes {
+            width: 350px; } }
         .about .description .stats .boxes div {
           display: flex;
           align-items: center;
@@ -235,15 +239,28 @@ button,
   align-items: center;
   padding-bottom: 100px; }
   .container-2 .projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 300px;
     width: 400px;
     transition: 1s ease-out;
     transform: translateY(70%);
     opacity: 0;
     transition: opacity 500ms,  transform 800ms; }
+    @media screen and (max-width: 750px) {
+      .container-2 .projects {
+        width: 350px; } }
     .container-2 .projects .projects-img {
       position: relative;
       z-index: 1; }
+      .container-2 .projects .projects-img img {
+        height: 300px;
+        width: 400px; }
+        @media screen and (max-width: 750px) {
+          .container-2 .projects .projects-img img {
+            width: 350px; } }
       .container-2 .projects .projects-img .info {
         height: 300px;
         width: 400px;
@@ -256,6 +273,9 @@ button,
         opacity: 0;
         transition: opacity 500ms;
         z-index: 2; }
+        @media screen and (max-width: 750px) {
+          .container-2 .projects .projects-img .info {
+            width: 350px; } }
         .container-2 .projects .projects-img .info p:nth-child(1) {
           font-weight: bold;
           font-size: 1.3rem; }
@@ -279,26 +299,3 @@ button,
   .container-2 .projects.appear {
     transform: translateY(0);
     opacity: 1; }
-
-.sql {
-  margin: -40px -20px 0px 0px;
-  z-index: -1; }
-
-.wheel {
-  -webkit-animation: wheel 6s infinite linear;
-  animation: wheel 6s infinite linear;
-  transform-origin: center;
-  transform-box: fill-box;
-  margin-top: -3000px !important; }
-
-@-webkit-keyframes wheel {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
-
-@keyframes wheel {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
