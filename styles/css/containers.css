@@ -241,29 +241,28 @@ button,
   padding-bottom: 100px; }
   .container-2 .projects {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 300px;
-    width: 400px;
-    transition: 1s ease-out;
-    transform: translateY(70%);
-    opacity: 0;
-    transition: opacity 800ms,  transform 1.5s; }
+    flex-wrap: wrap; }
     @media screen and (max-width: 750px) {
       .container-2 .projects {
         width: 350px; } }
-    .container-2 .projects .projects-img {
+    .container-2 .projects .projects-img1,
+    .container-2 .projects .projects-img2 {
       position: relative;
       z-index: 1; }
-      .container-2 .projects .projects-img img {
-        height: 300px;
+      .container-2 .projects .projects-img1 img,
+      .container-2 .projects .projects-img2 img {
+        height: 350px;
         width: 400px; }
         @media screen and (max-width: 750px) {
-          .container-2 .projects .projects-img img {
+          .container-2 .projects .projects-img1 img,
+          .container-2 .projects .projects-img2 img {
             width: 350px; } }
-      .container-2 .projects .projects-img .info {
-        height: 300px;
+      .container-2 .projects .projects-img1 .info,
+      .container-2 .projects .projects-img2 .info {
+        height: 350px;
         width: 400px;
         position: absolute;
         top: 0;
@@ -275,28 +274,48 @@ button,
         transition: opacity 500ms;
         z-index: 2; }
         @media screen and (max-width: 750px) {
-          .container-2 .projects .projects-img .info {
+          .container-2 .projects .projects-img1 .info,
+          .container-2 .projects .projects-img2 .info {
             width: 350px; } }
-        .container-2 .projects .projects-img .info p:nth-child(1) {
+        .container-2 .projects .projects-img1 .info p:nth-child(1),
+        .container-2 .projects .projects-img2 .info p:nth-child(1) {
           font-weight: bold;
           font-size: 1.3rem; }
-        .container-2 .projects .projects-img .info p:nth-child(2) {
+        .container-2 .projects .projects-img1 .info p:nth-child(2),
+        .container-2 .projects .projects-img2 .info p:nth-child(2) {
           color: var(--brand-color);
           line-height: 0.3rem; }
-        .container-2 .projects .projects-img .info p:nth-child(3) {
+        .container-2 .projects .projects-img1 .info p:nth-child(3),
+        .container-2 .projects .projects-img2 .info p:nth-child(3) {
           padding: 0px 20px; }
-        .container-2 .projects .projects-img .info .button {
+        .container-2 .projects .projects-img1 .info .button,
+        .container-2 .projects .projects-img2 .info .button {
           color: black;
           padding: 10px 20px;
           border: 2px solid var(--brand-color);
           background-color: inherit;
           transition: 600ms; }
-          .container-2 .projects .projects-img .info .button:hover {
+          .container-2 .projects .projects-img1 .info .button:hover,
+          .container-2 .projects .projects-img2 .info .button:hover {
             background-color: var(--brand-color);
             color: white; }
-      .container-2 .projects .projects-img:hover .info {
+      .container-2 .projects .projects-img1:hover .info,
+      .container-2 .projects .projects-img2:hover .info {
         opacity: 1;
         background-color: #f1eeee; }
-  .container-2 .projects.appear {
+    .container-2 .projects .projects-img1 {
+      transition: 1s ease-out;
+      transform: translateY(70%);
+      opacity: 0;
+      transition: opacity 800ms,  transform 1.5s; }
+    .container-2 .projects .projects-img2 {
+      transition: 1s ease-out;
+      transform: translateX(70%);
+      opacity: 0;
+      transition: opacity 800ms,  transform 1.5s; }
+  .container-2 .projects-img1.appear {
     transform: translateY(0);
+    opacity: 1; }
+  .container-2 .projects-img2.appear {
+    transform: translateX(0);
     opacity: 1; }

@@ -12,7 +12,6 @@ function myFunction() {
   }
 }
 
-
 let stats = document.querySelectorAll('.fade-in') 
 let slide = document.querySelectorAll('.slide')
 
