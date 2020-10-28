@@ -4,9 +4,6 @@ let navbar = document.getElementById("nav-bar");
 
 let sticky = navbar.offsetTop;
 
-
-climbingLeaderboard(3, [3, 4]);
-
 function myFunction() {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky")
