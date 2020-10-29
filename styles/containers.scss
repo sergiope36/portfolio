@@ -229,6 +229,8 @@ $size3:1200px;
 .container-2 {
     @include display-flex(flex, column , center, center);
     padding-bottom: 100px;
+    position: relative;
+    z-index: -1;
     .projects {
         @include display-flex(flex, row , center, center);
         flex-wrap: wrap;
